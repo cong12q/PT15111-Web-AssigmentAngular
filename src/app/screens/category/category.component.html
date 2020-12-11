@@ -1,0 +1,22 @@
+<div class="row">
+    <ng-container *ngFor="let book of books">
+        <div *ngIf="cateID==book.category.id" class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+                <hr>
+                <a><img class="card-img-top" width="235" height="235" src="{{book.image.name}}" alt=""></a>
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <a routeLink="chi-tiet-sach/{{book.id}}">{{book.name}}</a>
+                    </h4>
+                    <h5>${{book.price}}</h5>
+                    <p class="card-text">{{book.author}}</p>
+                    <p class="card-text">Thể loại: {{book.genre.name}}</p>
+                    <p class="card-text">Danh Mục: {{book.category.name}}</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+</div>

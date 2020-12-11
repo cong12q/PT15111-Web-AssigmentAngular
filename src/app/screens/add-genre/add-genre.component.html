@@ -1,0 +1,24 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let ge of genres">
+        <th scope="row">{{ge.id}}</th>
+        <td>{{ge.name}}</td>
+  
+      </tr>
+    </tbody>
+  
+  
+      <div >
+        <input type="name" class="form-control" placeholder="name" [value]="newName" (keyup)="newName = $event.target.value">
+        <button type="submit" (click)="addGenre()" class="btn btn-primary btn-block btn-flat">Thêm mới</button>
+      </div>
+  
+  
+  </table>

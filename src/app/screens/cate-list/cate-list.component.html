@@ -1,0 +1,5 @@
+<ul>
+    <li *ngFor="let pro of product_list">
+        <a [routerLink]="['/chi-tiet-san-pham',pro.id]">{{pro.name}}</a>
+    </li>
+</ul>
